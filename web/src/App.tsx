@@ -1,32 +1,31 @@
+import {DefaultTodoRepository, TodoRepository} from './repository/TodoRepository.ts'
 import {useEffect, useState} from 'react'
+import {TodoResponse} from './model/TodoResponse.ts'
 
-function App() {
-    const [greeting, setGreeting] = useState('')
-    const [draftMessage, setDraftMessage] = useState('')
+interface Props {
+    todoRepository: TodoRepository
+}
+
+export default function App(
+    {
+        todoRepository = new DefaultTodoRepository()
+    }: Props
+) {
+    const [todos, setTodos] = useState<TodoResponse[]>([])
 
     useEffect(() => {
-        fetch('/api/hello')
-            .then(res => res.json())
-            .then(greeting => setGreeting(greeting))
+        todoRepository.getTodos()
+            .then(res => setTodos(res))
     }, [])
-
-    async function onClickSendButton() {
-        const headers = {
-            'Content-Type': 'application/json'
-        }
-        await fetch('/api/hello/messages', {body: draftMessage, headers, method: 'POST'})
-    }
 
     return (
         <>
-            {greeting}
-            <label>
-                send message
-                <input type="text" value={draftMessage} onChange={e => setDraftMessage(e.target.value)}/>
-            </label>
-            <button onClick={onClickSendButton}>send</button>
+            TODO
+            {todos.map(todo => (
+                <div key={window.crypto.randomUUID()}>
+                    {todo.todo}
+                </div>
+            ))}
         </>
     )
 }
-
-export default App
