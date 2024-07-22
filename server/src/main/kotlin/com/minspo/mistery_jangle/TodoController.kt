@@ -10,7 +10,7 @@ class TodoController(
     private val todoService: TodoService
 ) {
     @GetMapping
-    fun getTodos(): List<Todo> {
+    fun getTodos(): List<TodoRecord> {
         return todoService.getTodos()
     }
 }
