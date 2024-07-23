@@ -25,9 +25,32 @@ class DefaultTodoServiceTest {
             val todos = todoService.getTodos()
 
 
-            assertEquals(todos.size, 2)
-            assertEquals(todos.first().todo, "髪を切る")
-            assertEquals(todos.last().todo, "自転車に乗る")
+            assertEquals(2, todos.size)
+            assertEquals("髪を切る", todos.first().todo)
+            assertEquals("自転車に乗る", todos.last().todo)
+        }
+    }
+
+    @Nested
+    inner class SaveTodo {
+        @Test
+        fun saveTodoを呼ぶとDBにTodoを保存し全てのTodoを返す() {
+            todoRepository.saveAll(listOf(
+                TodoRecord(todo = "風呂掃除をする"),
+                TodoRecord(todo = "机を拭く"),
+            ))
+            val todoService = DefaultTodoService(todoRepository)
+
+
+            val todoRecords = todoService.saveTodo("髪を乾かす")
+            val savedTodoRecords = todoRepository.findAll()
+
+
+            assertEquals(3, todoRecords.size)
+            assertEquals("風呂掃除をする", todoRecords.first().todo)
+            assertEquals("髪を乾かす", todoRecords.last().todo)
+            assertEquals("風呂掃除をする", savedTodoRecords.first().todo)
+            assertEquals("髪を乾かす", savedTodoRecords.last().todo)
         }
     }
 }

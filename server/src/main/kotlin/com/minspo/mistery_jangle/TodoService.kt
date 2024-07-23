@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service
 
 interface TodoService {
     fun getTodos(): List<TodoRecord>
+    fun saveTodo(todo: String): List<TodoRecord>
 }
 
 @Service
@@ -13,5 +14,10 @@ class DefaultTodoService(
     override fun getTodos(): List<TodoRecord> {
         val todoRecords = todoRepository.findAll()
         return todoRecords
+    }
+
+    override fun saveTodo(todo: String): List<TodoRecord> {
+        todoRepository.save(TodoRecord(todo = todo))
+        return todoRepository.findAll()
     }
 }

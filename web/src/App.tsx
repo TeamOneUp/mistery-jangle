@@ -12,20 +12,36 @@ export default function App(
     }: Props
 ) {
     const [todos, setTodos] = useState<TodoResponse[]>([])
+    const [text, setText] = useState<string>('')
 
     useEffect(() => {
         todoRepository.getTodos()
-            .then(res => setTodos(res))
+            .then(todos => setTodos(todos))
     }, [])
+
+    async function SaveTodo() {
+        const todos = await todoRepository.saveTodo(text)
+        setTodos(todos)
+        setText('')
+    }
 
     return (
         <>
             TODO
+            <label>
+                New Todo
+                <input
+                    type="text"
+                    onChange={(e) => setText(e.target.value)}
+                    value={text}
+                />
+            </label>
             {todos.map(todo => (
                 <div key={window.crypto.randomUUID()}>
                     {todo.todo}
                 </div>
             ))}
+            <button onClick={SaveTodo}>保存</button>
         </>
     )
 }
