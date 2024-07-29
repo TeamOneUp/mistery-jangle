@@ -9,7 +9,6 @@
     }
   ],
   "compilerOptions": {
-    "noUnusedParameters": false,
     "types": [
       "vitest/globals"
     ]
