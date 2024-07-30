@@ -1,0 +1,54 @@
+# Xcode
+#
+# User-specific files
+*.xcuserstate
+*.xcscmblueprint
+
+# Workspace and project settings
+xcuserdata/
+xcshareddata/
+
+# Derived data
+DerivedData/
+build/
+.idea/
+Pods/
+
+# Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Build products
+build/
+*.app
+*.app.dSYM
+*.framework
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Temporary and log files
+*.log
+*.tmp
+*.swp
+*.lock
+*.xcdebugger
+*.xcconfig
+
+# Swift Package Manager
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Example: SourcePackages/checkouts/SomePackage
+SourcePackages/
+Package.resolved
+
+# Project-specific settings
+ios.xcodeproj/xcuserdata/
+ios.xcodeproj/project.xcworkspace/xcuserdata/
+ios.xcodeproj/project.xcworkspace/xcshareddata/
+
