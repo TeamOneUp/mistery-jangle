@@ -46,7 +46,17 @@ struct ContentView: View {
                 }
             }
         }
-            
+        
+    }
+    
+    class ViewModel: ObservableObject {
+        @Published var todos: [TodoResponse] = []
+        
+        init(todoRepository: TodoRepository)  {
+            Task {
+                todos = try await todoRepository.getTodos()
+            }
+        }
     }
 }
 

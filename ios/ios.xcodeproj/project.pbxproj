@@ -11,9 +11,12 @@
 		CE90DD282C58A03100B71717 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD272C58A03100B71717 /* ContentView.swift */; };
 		CE90DD2A2C58A03300B71717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE90DD292C58A03300B71717 /* Assets.xcassets */; };
 		CE90DD2D2C58A03300B71717 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE90DD2C2C58A03300B71717 /* Preview Assets.xcassets */; };
-		CE90DD372C58A03300B71717 /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD362C58A03300B71717 /* iosTests.swift */; };
+		CE90DD372C58A03300B71717 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD362C58A03300B71717 /* ContentViewTests.swift */; };
 		CE90DD412C58A03300B71717 /* iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD402C58A03300B71717 /* iosUITests.swift */; };
 		CE90DD432C58A03300B71717 /* iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD422C58A03300B71717 /* iosUITestsLaunchTests.swift */; };
+		CE90DD512C58BFA500B71717 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = CE90DD502C58BFA500B71717 /* Nimble */; };
+		CE90DD542C58C07100B71717 /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD532C58C07100B71717 /* TodoRepository.swift */; };
+		CE90DD572C58C0F600B71717 /* TodoRepositoryDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD562C58C0F600B71717 /* TodoRepositoryDoubles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +43,12 @@
 		CE90DD292C58A03300B71717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE90DD2C2C58A03300B71717 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE90DD322C58A03300B71717 /* iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE90DD362C58A03300B71717 /* iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosTests.swift; sourceTree = "<group>"; };
+		CE90DD362C58A03300B71717 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		CE90DD3C2C58A03300B71717 /* iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE90DD402C58A03300B71717 /* iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUITests.swift; sourceTree = "<group>"; };
 		CE90DD422C58A03300B71717 /* iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE90DD532C58C07100B71717 /* TodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
+		CE90DD562C58C0F600B71717 /* TodoRepositoryDoubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepositoryDoubles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE90DD512C58BFA500B71717 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,7 @@
 		CE90DD242C58A03100B71717 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				CE90DD522C58C04300B71717 /* Repositories */,
 				CE90DD252C58A03100B71717 /* iosApp.swift */,
 				CE90DD272C58A03100B71717 /* ContentView.swift */,
 				CE90DD292C58A03300B71717 /* Assets.xcassets */,
@@ -113,7 +120,8 @@
 		CE90DD352C58A03300B71717 /* iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE90DD362C58A03300B71717 /* iosTests.swift */,
+				CE90DD552C58C0E000B71717 /* Repositories */,
+				CE90DD362C58A03300B71717 /* ContentViewTests.swift */,
 			);
 			path = iosTests;
 			sourceTree = "<group>";
@@ -125,6 +133,22 @@
 				CE90DD422C58A03300B71717 /* iosUITestsLaunchTests.swift */,
 			);
 			path = iosUITests;
+			sourceTree = "<group>";
+		};
+		CE90DD522C58C04300B71717 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE90DD532C58C07100B71717 /* TodoRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CE90DD552C58C0E000B71717 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE90DD562C58C0F600B71717 /* TodoRepositoryDoubles.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +185,9 @@
 				CE90DD342C58A03300B71717 /* PBXTargetDependency */,
 			);
 			name = iosTests;
+			packageProductDependencies = (
+				CE90DD502C58BFA500B71717 /* Nimble */,
+			);
 			productName = iosTests;
 			productReference = CE90DD322C58A03300B71717 /* iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -215,6 +242,9 @@
 				Base,
 			);
 			mainGroup = CE90DD192C58A03100B71717;
+			packageReferences = (
+				CE90DD4F2C58BFA500B71717 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = CE90DD232C58A03100B71717 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +289,7 @@
 			files = (
 				CE90DD282C58A03100B71717 /* ContentView.swift in Sources */,
 				CE90DD262C58A03100B71717 /* iosApp.swift in Sources */,
+				CE90DD542C58C07100B71717 /* TodoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE90DD372C58A03300B71717 /* iosTests.swift in Sources */,
+				CE90DD572C58C0F600B71717 /* TodoRepositoryDoubles.swift in Sources */,
+				CE90DD372C58A03300B71717 /* ContentViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE90DD4F2C58BFA500B71717 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE90DD502C58BFA500B71717 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE90DD4F2C58BFA500B71717 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE90DD1A2C58A03100B71717 /* Project object */;
 }
