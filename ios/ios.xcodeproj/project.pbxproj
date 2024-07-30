@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81282BBD2C59156900A0E869 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 81282BBC2C59156900A0E869 /* Nimble */; };
+		81282BBF2C591C8C00A0E869 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81282BBE2C591C8C00A0E869 /* ContentViewTests.swift */; };
+		81282BC22C591F1000A0E869 /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81282BC12C591F1000A0E869 /* TodoRepository.swift */; };
+		81282BC52C59224300A0E869 /* TodoRepositoryDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81282BC42C59224300A0E869 /* TodoRepositoryDoubles.swift */; };
 		81F2C2FF2C58E99F00921CAD /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2C2FE2C58E99F00921CAD /* iosApp.swift */; };
 		81F2C3012C58E99F00921CAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F2C3002C58E99F00921CAD /* ContentView.swift */; };
 		81F2C3032C58E9A000921CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F2C3022C58E9A000921CAD /* Assets.xcassets */; };
@@ -35,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		81282BBA2C590C8200A0E869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		81282BBE2C591C8C00A0E869 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
+		81282BC12C591F1000A0E869 /* TodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
+		81282BC42C59224300A0E869 /* TodoRepositoryDoubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepositoryDoubles.swift; sourceTree = "<group>"; };
 		81F2C2FB2C58E99F00921CAD /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F2C2FE2C58E99F00921CAD /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		81F2C3002C58E99F00921CAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81282BBD2C59156900A0E869 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81282BC02C591E9E00A0E869 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				81282BC12C591F1000A0E869 /* TodoRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		81282BC32C59223600A0E869 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				81282BC42C59224300A0E869 /* TodoRepositoryDoubles.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
 		81F2C2F22C58E99F00921CAD = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +120,7 @@
 		81F2C2FD2C58E99F00921CAD /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				81282BC02C591E9E00A0E869 /* repository */,
 				81282BBA2C590C8200A0E869 /* Info.plist */,
 				81F2C2FE2C58E99F00921CAD /* iosApp.swift */,
 				81F2C3002C58E99F00921CAD /* ContentView.swift */,
@@ -117,7 +142,9 @@
 		81F2C30F2C58E9A000921CAD /* iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				81282BC32C59223600A0E869 /* repository */,
 				81F2C3102C58E9A000921CAD /* iosTests.swift */,
+				81282BBE2C591C8C00A0E869 /* ContentViewTests.swift */,
 			);
 			path = iosTests;
 			sourceTree = "<group>";
@@ -165,6 +192,9 @@
 				81F2C30E2C58E9A000921CAD /* PBXTargetDependency */,
 			);
 			name = iosTests;
+			packageProductDependencies = (
+				81282BBC2C59156900A0E869 /* Nimble */,
+			);
 			productName = iosTests;
 			productReference = 81F2C30C2C58E9A000921CAD /* iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -219,6 +249,9 @@
 				Base,
 			);
 			mainGroup = 81F2C2F22C58E99F00921CAD;
+			packageReferences = (
+				81282BBB2C59156900A0E869 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = 81F2C2FC2C58E99F00921CAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +296,7 @@
 			files = (
 				81F2C3012C58E99F00921CAD /* ContentView.swift in Sources */,
 				81F2C2FF2C58E99F00921CAD /* iosApp.swift in Sources */,
+				81282BC22C591F1000A0E869 /* TodoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81282BC52C59224300A0E869 /* TodoRepositoryDoubles.swift in Sources */,
+				81282BBF2C591C8C00A0E869 /* ContentViewTests.swift in Sources */,
 				81F2C3112C58E9A000921CAD /* iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +657,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81282BBB2C59156900A0E869 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81282BBC2C59156900A0E869 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81282BBB2C59156900A0E869 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81F2C2F32C58E99F00921CAD /* Project object */;
 }
