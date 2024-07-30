@@ -1,7 +1,7 @@
 name: minspo
 services:
   db:
-    image: postgres
+    image: postgres:15
     container_name: minspo-postgres
     ports:
       - 5432:5432
