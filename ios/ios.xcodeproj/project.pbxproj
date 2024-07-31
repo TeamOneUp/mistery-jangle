@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE11F9672C5A1787006BC302 /* Dispatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11F9662C5A1787006BC302 /* Dispatching.swift */; };
+		CE11F9692C5A19DD006BC302 /* DispatchingDoubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11F9682C5A19DD006BC302 /* DispatchingDoubles.swift */; };
+		CE11F96B2C5A1E70006BC302 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11F96A2C5A1E70006BC302 /* DIContainer.swift */; };
+		CE11F96D2C5A1F79006BC302 /* DIContainer+fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11F96C2C5A1F79006BC302 /* DIContainer+fixture.swift */; };
 		CE90DD262C58A03100B71717 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD252C58A03100B71717 /* iosApp.swift */; };
 		CE90DD282C58A03100B71717 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90DD272C58A03100B71717 /* ContentView.swift */; };
 		CE90DD2A2C58A03300B71717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE90DD292C58A03300B71717 /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE11F9662C5A1787006BC302 /* Dispatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatching.swift; sourceTree = "<group>"; };
+		CE11F9682C5A19DD006BC302 /* DispatchingDoubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchingDoubles.swift; sourceTree = "<group>"; };
+		CE11F96A2C5A1E70006BC302 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		CE11F96C2C5A1F79006BC302 /* DIContainer+fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DIContainer+fixture.swift"; sourceTree = "<group>"; };
 		CE90DD222C58A03100B71717 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE90DD252C58A03100B71717 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		CE90DD272C58A03100B71717 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +113,8 @@
 				CE90DD272C58A03100B71717 /* ContentView.swift */,
 				CE90DD292C58A03300B71717 /* Assets.xcassets */,
 				CE90DD2B2C58A03300B71717 /* Preview Content */,
+				CE11F9662C5A1787006BC302 /* Dispatching.swift */,
+				CE11F96A2C5A1E70006BC302 /* DIContainer.swift */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -122,6 +132,8 @@
 			children = (
 				CE90DD552C58C0E000B71717 /* Repositories */,
 				CE90DD362C58A03300B71717 /* ContentViewTests.swift */,
+				CE11F9682C5A19DD006BC302 /* DispatchingDoubles.swift */,
+				CE11F96C2C5A1F79006BC302 /* DIContainer+fixture.swift */,
 			);
 			path = iosTests;
 			sourceTree = "<group>";
@@ -289,6 +301,8 @@
 			files = (
 				CE90DD282C58A03100B71717 /* ContentView.swift in Sources */,
 				CE90DD262C58A03100B71717 /* iosApp.swift in Sources */,
+				CE11F96B2C5A1E70006BC302 /* DIContainer.swift in Sources */,
+				CE11F9672C5A1787006BC302 /* Dispatching.swift in Sources */,
 				CE90DD542C58C07100B71717 /* TodoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +311,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE11F9692C5A19DD006BC302 /* DispatchingDoubles.swift in Sources */,
 				CE90DD572C58C0F600B71717 /* TodoRepositoryDoubles.swift in Sources */,
+				CE11F96D2C5A1F79006BC302 /* DIContainer+fixture.swift in Sources */,
 				CE90DD372C58A03300B71717 /* ContentViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

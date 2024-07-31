@@ -52,9 +52,14 @@ struct ContentView: View {
     class ViewModel: ObservableObject {
         @Published var todos: [TodoResponse] = []
         
-        init(todoRepository: TodoRepository)  {
+        init(
+            diContainer: DIContainer
+        )  {
             Task {
-                todos = try await todoRepository.getTodos()
+                let todos = try await diContainer.todoRepository.getTodos()
+                diContainer.dispatching.asyncWrapper {
+                    self.todos = todos
+                }
             }
         }
     }
